@@ -18,14 +18,14 @@ Los textos describen el diseño actual de AKAI, que está en desarrollo. **No so
 
 ## Marcadores pendientes
 
+**Contacto confirmado:** `helloakaistudio@gmail.com` (privacidad, condiciones y solicitudes de eliminación). Que el correo exista no significa que el proceso de eliminación esté validado: eso sigue marcado como pendiente en la página.
+
 Cada dato no confirmado está visible en la página como `[… PENDIENTE]`. Antes de la revisión de Meta hay que sustituirlos:
 
 | Marcador | Dónde |
 |---|---|
 | `[ENTIDAD LEGAL PENDIENTE]` | privacidad, condiciones |
-| `[CORREO DE PRIVACIDAD PENDIENTE]` | privacidad |
-| `[CORREO DE CONTACTO PENDIENTE]` | condiciones |
-| `[CANAL DE SOLICITUD DE ELIMINACIÓN PENDIENTE]` | eliminación de datos |
+| `[VALIDACIÓN DEL PROCESO DE ELIMINACIÓN PENDIENTE]` | eliminación de datos |
 | `[PLAZO DE CONSERVACIÓN PENDIENTE]` | privacidad, eliminación de datos |
 | `[PLAZO DE RESPUESTA A SOLICITUDES PENDIENTE]` | privacidad, eliminación de datos |
 | `[PROVEEDORES DE INFRAESTRUCTURA PENDIENTES]` / `[…Y DE IA PENDIENTES]` | privacidad |
