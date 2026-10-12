@@ -1,0 +1,99 @@
+/* AKAI legal pages. Static, no dependencies, no external fonts or scripts. */
+:root {
+  --paper: #f5f2ec;
+  --surface: #faf8f3;
+  --ink: #17160f;
+  --ink-soft: #3a382f;
+  --muted: #5f5b52;
+  --line: #d9d3c5;
+  --accent: #a32d15;
+  --accent-wash: #f6e3dc;
+  --link: #8f2813;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14130f;
+    --surface: #1a1915;
+    --ink: #f1ede4;
+    --ink-soft: #d4cfc2;
+    --muted: #a6a194;
+    --line: #38362f;
+    --accent: #f4917e;
+    --accent-wash: #3a211b;
+    --link: #f4917e;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color-scheme: light dark;
+}
+
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; z-index: 10; }
+.skip:focus { top: 1rem; }
+
+.wrap { width: 100%; max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+header.site { border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; letter-spacing: 0.14em; color: var(--ink); text-decoration: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; padding: 0.4rem 0; display: inline-block; min-height: 2.75rem; line-height: 1.9rem; }
+nav a:hover { color: var(--ink); text-decoration: underline; }
+nav a[aria-current='page'] { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--accent); }
+
+main { padding: 2.5rem 0 4rem; }
+h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 1.4rem + 2vw, 2.7rem); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 0.75rem; }
+h2 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height: 1.25; margin: 2.6rem 0 0.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.25rem; }
+p { margin: 0.75rem 0; max-width: 65ch; }
+ul, ol { padding-left: 1.25rem; max-width: 65ch; }
+li { margin: 0.35rem 0; }
+.lede { font-size: 1.125rem; color: var(--ink-soft); }
+.meta { font-size: 0.9rem; color: var(--muted); margin: 0 0 1.5rem; }
+
+.draft { border-left: 3px solid var(--accent); background: var(--accent-wash); padding: 0.8rem 1rem; margin: 1.5rem 0; font-size: 0.95rem; max-width: 65ch; }
+.draft p { margin: 0.3rem 0; }
+
+/* A fact AKAI has not confirmed yet. Always visible, never hidden in a comment. */
+.pending { background: var(--accent-wash); color: var(--accent); font-weight: 600; padding: 0.05em 0.35em; border-radius: 3px; white-space: normal; }
+
+.status { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+dl.status-list { margin: 0.5rem 0 1rem; max-width: 65ch; }
+dl.status-list dt { font-weight: 600; margin-top: 0.9rem; }
+dl.status-list dd { margin: 0.15rem 0 0; color: var(--ink-soft); }
+
+.docs { list-style: none; padding: 0; margin: 2rem 0 0; max-width: none; border-top: 2px solid var(--ink); }
+.docs li { margin: 0; border-bottom: 1px solid var(--line); }
+.docs a { display: block; padding: 1.1rem 0.25rem; text-decoration: none; color: inherit; }
+.docs a:hover { background: var(--surface); }
+.docs strong { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--ink); display: block; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--accent); }
+.docs span { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
+
+footer.site { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; }
+footer.site p { max-width: none; margin: 0.4rem 0; }
+footer.site ul { list-style: none; padding: 0; margin: 0.5rem 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; max-width: none; }
+
+@media (max-width: 480px) {
+  main { padding-top: 1.75rem; }
+  h2 { margin-top: 2rem; }
+}
+@media print {
+  header.site nav, .skip { display: none; }
+  body { background: #fff; color: #000; }
+}
